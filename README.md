@@ -1,5 +1,5 @@
 # trackerUpdate
-Modified version of Tracker (github.com/OpenSourcePhysics/tracker) for work at Theia Markerless
+Modified version of Tracker (github.com/OpenSourcePhysics/tracker) for work at Theia Markerless; reuploaded here rather than committed because these modifications are not necessarily useful to those who use Tracker for physics tracking purposes, but were primarily made to increase image annotation speed and accuracy.
 
 ## Modified Files
 - PointMass.java and PointShapeFootprint.java: added Cross footprint (combination of horizontal line and vertical line footprints)
