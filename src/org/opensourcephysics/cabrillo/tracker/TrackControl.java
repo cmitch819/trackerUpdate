@@ -121,52 +121,11 @@ public class TrackControl extends JDialog
     shiftKeyListener = new KeyAdapter() {
     	// transfers focus to trackerPanel for marking
       public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_SHIFT) {
+        if (e.getKeyCode() == KeyEvent.VK_SHIFT || e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_F || e.getKeyCode() == KeyEvent.VK_G|| e.getKeyCode() == KeyEvent.VK_H|| e.getKeyCode() == KeyEvent.VK_J||e.getKeyCode() == KeyEvent.VK_K  || e.getKeyCode() == KeyEvent.VK_L) {
         	trackerPanel.requestFocus();
         	trackerPanel.requestFocusInWindow();
         }
-        else if (e.getKeyCode() == KeyEvent.VK_X) {
-            try { 
-            	trackerPanel.setSelectedTrack(tracks.get(0));
-            }
-            catch (Exception ex) {
-            	System.out.println("ex1");
-            }
-            trackerPanel.requestFocus();
-        	trackerPanel.requestFocusInWindow();
-        }
-        else if (e.getKeyCode() == KeyEvent.VK_C) {
-            try { 
-            	trackerPanel.setSelectedTrack(tracks.get(1));
-            }
-            catch (Exception ex) {
-            	System.out.println("ex2");
-            }
-            trackerPanel.requestFocus();
-        	trackerPanel.requestFocusInWindow();
-        }
-        else if (e.getKeyCode() == KeyEvent.VK_V) {
-        	
-            try { 
-            	trackerPanel.setSelectedTrack(tracks.get(2));
-            }
-            catch (Exception ex) {
-            	System.out.println("ex3");
-            }
-            trackerPanel.requestFocus();
-        	trackerPanel.requestFocusInWindow();
-        }
-        else if (e.getKeyCode() == KeyEvent.VK_A) {
-            try { 
-            	trackerPanel.setSelectedTrack(tracks.get(3));
-            }
-            catch (Exception ex) {
-            	System.out.println("ex4");
-            	
-            }
-            trackerPanel.requestFocus();
-        	trackerPanel.requestFocusInWindow();
-        }
+        
         else if (e.getKeyCode() == KeyEvent.VK_A) {
         	MainTView mainView = trackerPanel.getTFrame().getMainView(trackerPanel);
         	mainView.keyAdapter.keyPressed(e);

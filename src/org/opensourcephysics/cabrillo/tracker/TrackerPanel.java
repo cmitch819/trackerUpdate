@@ -1898,16 +1898,15 @@ public class TrackerPanel extends VideoPanel implements Scrollable {
    */
   protected void configure() {
 	List<Integer> keys = new ArrayList<Integer>() {{
-		add(KeyEvent.VK_X);
-		add(KeyEvent.VK_C);
-		add(KeyEvent.VK_V);
 		add(KeyEvent.VK_A);
 		add(KeyEvent.VK_S);
 		add(KeyEvent.VK_D);
-		add(KeyEvent.VK_7);
-		add(KeyEvent.VK_8);
-		add(KeyEvent.VK_9);
-		add(KeyEvent.VK_0);
+		add(KeyEvent.VK_F);
+		add(KeyEvent.VK_G);
+		add(KeyEvent.VK_H);
+		add(KeyEvent.VK_J);
+		add(KeyEvent.VK_K);
+		add(KeyEvent.VK_L);
 	}};
 	  
     coords.removePropertyChangeListener(this);
@@ -1922,45 +1921,41 @@ public class TrackerPanel extends VideoPanel implements Scrollable {
         	int size = getUserTracks().size();
         	int index = keys.indexOf(e.getKeyCode());
         	if (index < size) {
-        		if (e.getKeyCode() == KeyEvent.VK_X) {
+        		if (e.getKeyCode() == KeyEvent.VK_A) {
                 	setSelectedTrack(getUserTracks().get(0));
         			keyPressHandle(isKeyOneDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_C) {
+        		else if (e.getKeyCode() == KeyEvent.VK_S) {
                 	setSelectedTrack(getUserTracks().get(1));
         			keyPressHandle(isKeyTwoDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_V) {
+        		else if (e.getKeyCode() == KeyEvent.VK_D) {
                 	setSelectedTrack(getUserTracks().get(2));
         			keyPressHandle(isKeyThreeDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_A) {
+        		else if (e.getKeyCode() == KeyEvent.VK_F) {
                 	setSelectedTrack(getUserTracks().get(3));
         			keyPressHandle(isKeyFourDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_S) {
+        		else if (e.getKeyCode() == KeyEvent.VK_G) {
                 	setSelectedTrack(getUserTracks().get(4));
         			keyPressHandle(isKeyFiveDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_D) {
+        		else if (e.getKeyCode() == KeyEvent.VK_H) {
                 	setSelectedTrack(getUserTracks().get(5));
         			keyPressHandle(isKeySixDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_7) {
+        		else if (e.getKeyCode() == KeyEvent.VK_J) {
                 	setSelectedTrack(getUserTracks().get(6));
         			keyPressHandle(isKeySevenDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_8) {
+        		else if (e.getKeyCode() == KeyEvent.VK_K) {
                 	setSelectedTrack(getUserTracks().get(7));
         			keyPressHandle(isKeyEightDown, e);
         		}
-        		else if (e.getKeyCode() == KeyEvent.VK_9) {
+        		else if (e.getKeyCode() == KeyEvent.VK_L) {
                 	setSelectedTrack(getUserTracks().get(8));
         			keyPressHandle(isKeyNineDown, e);
-        		}
-        		else if (e.getKeyCode() == KeyEvent.VK_0) {
-                	setSelectedTrack(getUserTracks().get(9));
-        			keyPressHandle(isKeyTenDown, e);
         		}
         	}    	
         }
